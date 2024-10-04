@@ -385,6 +385,11 @@ h6,
     border-color: var(--primary);
 }
 
+.col-sm-6{
+    margin-left: 3em;
+
+}
+
 
 /*** Testimonial ***/
 .testimonial-carousel {

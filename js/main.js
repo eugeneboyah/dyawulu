@@ -81,7 +81,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.count');
-    const speed = 2000; // Increase speed for slower count-up (higher number means slower)
+    const speed = 7000; // Increase speed for slower count-up (higher number means slower)
 
     counters.forEach(counter => {
       const updateCount = () => {

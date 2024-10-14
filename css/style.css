@@ -96,6 +96,7 @@ h4,
 .display-5,
 .display-6 {
     font-family: 'Lobster Two', cursive;
+    font-size: 3rem; 
     font-weight: 700;
 }
 
@@ -190,35 +191,44 @@ h6,
     z-index: 1;
 }
 
-.header-carousel::after,
+/* .header-carousel::after,
 .page-header::after {
     height: 19px;
     top: auto;
     bottom: 0;
     background: url(../img/bg-header-bottom.png) center center repeat-x;
+} */
+
+.header-carousel .owl-carousel-item {
+    height: 50vh; /* Set height as 50% of the viewport */
+}
+
+.header-carousel .owl-carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    object-position: center; /* Centers the image */
 }
 
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 500px;
+        min-height: 30vh;
     }
     
     .header-carousel .owl-carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        
         object-fit: cover;
     }
 
     .header-carousel .owl-carousel-item p {
-        font-size: 16px !important;
-        font-weight: 400 !important;
+        font-size: 14px !important;
+        font-weight: 300 !important;
     }
 
     .header-carousel .owl-carousel-item h1 {
-        font-size: 30px;
-        font-weight: 600;
+        font-size: 0px;
+        font-weight: 500;
     }
 }
 
@@ -263,6 +273,77 @@ h6,
     background-size:cover;
 }
 
+
+/* main-actionBar */
+
+.main-actionBar {
+    margin-top: -75px; /* Adjust to overlap as needed */
+    position: relative;
+    z-index: 2; /* Ensure boxes are above carousel */
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 8rem;
+}
+.actionBar-item {
+    background-color: whitesmoke; /* Bootstrap primary color */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link fill the box */
+    height: 100%; /* Ensure it fills the column height */
+}
+.actionBar-item:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px 3px rgba(255, 255, 0, 0.8);
+}
+@media (max-width: 768px) {
+    .main-welcome {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .main-welcome .row {
+        display: flex;
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .main-welcome img {
+        width: 100%; /* Make the image responsive */
+        max-width: 250px; /* Limit the maximum width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Add space between the image and text */
+    }
+
+    .welcome-text h5 {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+
+    .welcome-message h1 {
+        font-size: 1.5rem; /* Make the heading smaller for mobile */
+    }
+
+    .welcome-message p {
+        font-size: 1rem; /* Adjust the paragraph font size */
+        line-height: 1.5; /* Make the text more readable */
+    }
+
+    .atction-btn {
+        width: 40%; /* Make buttons full width */
+        margin-bottom: 1rem; /* Add spacing between buttons */
+    }
+}
+
+/* welcome-message */
+.apply-btn{
+    border: 1px solid #0e2f37;
+}
+.apply-btn:hover{
+    background-color:  #0e2f37;
+}
+
 /*** Facility ***/
 .facility-item .facility-icon {
     position: relative;
@@ -274,6 +355,16 @@ h6,
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .main-actionBar {
+        margin-top: -75px; /* Adjust to overlap as needed */
+        margin-left: 0;
+        margin-right: 0;
+        height: auto; /* Adjust height to fit mobile screens */
+    }
+}
+
 
 .facility-item .facility-icon::before {
     position: absolute;

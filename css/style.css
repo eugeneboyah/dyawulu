@@ -5,6 +5,71 @@
     --dark: #1A2421;
 }
 
+.impact-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Light gray background */
+    text-align: center;
+  }
+
+  /* Heading Styles */
+  .impact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* Dark blue color */
+    margin-bottom: 40px;
+  }
+
+  /* Impact Item Styles */
+  .impact-item {
+    margin-bottom: 30px;
+    /* background-color: #ffffff; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    opacity: 1; 
+    transform: translateY(30px);
+  }
+
+  .impact-item:hover {
+    transform: translateY(0) scale(1.05); /* Slight scale and lift on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+
+  /* Styles for the Icons */
+  .impact-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #0e2f37;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the icons */
+    font-size: 3rem;
+    /* color: #007bff;  */
+  }
+
+  /* Count-Up Number Styling */
+  .impact-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #27ae60; /* A green color to highlight numbers */
+  }
+
+  /* Descriptive Text Styling */
+  .impact-item p {
+    font-size: 1rem;
+    color: #7f8c8d; /* Soft gray for the description */
+  }
+
+  .impact-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 .back-to-top {
     position: fixed;
     display: none;

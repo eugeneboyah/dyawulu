@@ -79,3 +79,24 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.count');
+    const speed = 2000; // Increase speed for slower count-up (higher number means slower)
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const increment = target / speed; // Smaller increments for smoother counting
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20); // Increase this delay to slow down the update rate
+        } else {
+          counter.innerText = target; // Ensure it ends exactly at the target value
+        }
+      };
+
+      updateCount();
+    });
+  });

@@ -3,23 +3,35 @@
     --primary: #FF0000;
     --light: #FFF5F3;
     --dark: #1A2421;
-}
+} 
 
+/* impact */
 .impact-section {
     padding: 80px 0;
     text-align: center;
 
   } 
+ 
+  .impact-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0e2f37; 
+  }
+  .impact-item p {
+    font-size: 1rem;
+    color: #7f8c8d; 
+  }
 
-  /* Heading Styles */
+  .impact-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .impact-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #2c3e50; 
     margin-bottom: 40px;
   } 
-
-  /* Impact Item Styles */
   .impact-item {
     margin-bottom: 30px;
     padding: 30px;
@@ -35,8 +47,6 @@
     transform: translateY(0) scale(1.05); 
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
   } 
-
-  /* Styles for the Icons */
   .impact-icon {
     width: 80px;
     height: 80px;
@@ -51,14 +61,11 @@
     
   } 
 
-  /* Count-Up Number Styling */
   .impact-item h3 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #0e2f37; 
   }
-
-  /* Descriptive Text Styling */
   .impact-item p {
     font-size: 1rem;
     color: #7f8c8d; 
@@ -67,7 +74,7 @@
   .impact-item.show {
     opacity: 1;
     transform: translateY(0);
-  }
+  } 
 
 .back-to-top {
     position: fixed;
@@ -75,9 +82,9 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
-}
+} 
 
-.video-wrap {
+/* .video-wrap {
     z-index: -100;
   }
   
@@ -89,11 +96,11 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-  }
+  } */
 
 
 /*** Spinner ***/
-#spinner {
+ #spinner {
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
@@ -104,7 +111,7 @@
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
-}
+} 
 
 
 /*** Button ***/
@@ -141,7 +148,7 @@
     justify-content: center;
     font-weight: normal;
     border-radius: 50px;
-}
+} 
 
 
 /*** Heading ***/
@@ -173,11 +180,11 @@ h6,
 
 .font-secondary {
     font-family: 'Lobster Two', cursive;
-}
+} 
 
 
 /*** Navbar ***/
-.navbar .navbar-nav .nav-link {
+ .navbar .navbar-nav .nav-link {
     padding: 30px 15px;
     color: var(--dark);
     font-weight: 500;
@@ -237,11 +244,11 @@ h6,
         transition: .5s;
         opacity: 1;
     }
-}
+} 
 
 
 /*** Header ***/
-.header-carousel::before,
+ .header-carousel::before,
 .header-carousel::after,
 .page-header::before,
 .page-header::after {
@@ -270,9 +277,9 @@ h6,
 .header-carousel .owl-carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    object-position: center; /* Centers the image */
-}
+    object-fit: cover; 
+    object-position: center; 
+} 
 
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
@@ -335,29 +342,29 @@ h6,
 .about-page-header {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/about-img.jpg) center center no-repeat;
     background-size:cover;
-}
+} 
 
 
 /* main-actionBar */
 
 .main-actionBar {
-    margin-top: -75px; /* Adjust to overlap as needed */
+    margin-top: -75px;
     position: relative;
-    z-index: 2; /* Ensure boxes are above carousel */
+    z-index: 2; 
     margin-left: 10%;
     margin-right: 10%;
     height: 8rem;
 }
 .actionBar-item {
-    background-color: whitesmoke; /* Bootstrap primary color */
+    background-color: whitesmoke; 
     color: black;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     transition: transform 0.2s, box-shadow 0.2s;
-    text-decoration: none; /* Remove underline */
-    display: block; /* Make the link fill the box */
-    height: 100%; /* Ensure it fills the column height */
+    text-decoration: none; 
+    display: block; 
+    height: 100%; 
 }
 .actionBar-item:hover {
     transform: scale(1.05);
@@ -366,42 +373,42 @@ h6,
 }
 @media (max-width: 768px) {
     .main-welcome {
-        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+        padding: 2rem 1rem; 
     }
 
     .main-welcome .row {
         display: flex;
-        flex-direction: column; /* Stack the image and text vertically */
-        text-align: center; /* Center-align text */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .main-welcome img {
-        width: 100%; /* Make the image responsive */
-        max-width: 250px; /* Limit the maximum width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 1rem; /* Add space between the image and text */
+        width: 100%; 
+        max-width: 250px; 
+        height: auto;
+        margin-bottom: 1rem; 
     }
 
     .welcome-text h5 {
-        font-size: 1.2rem; /* Adjust font size for mobile */
+        font-size: 1.2rem; 
     }
 
     .welcome-message h1 {
-        font-size: 1.5rem; /* Make the heading smaller for mobile */
+        font-size: 1.5rem; 
     }
 
     .welcome-message p {
-        font-size: 1rem; /* Adjust the paragraph font size */
-        line-height: 1.5; /* Make the text more readable */
-    }
+        font-size: 1rem; 
+        line-height: 1.5;
+   }
 
     .atction-btn {
-        width: 40%; /* Make buttons full width */
-        margin-bottom: 1rem; /* Add spacing between buttons */
+        width: 40%; 
+        margin-bottom: 1rem; 
     }
 }
 
-/* welcome-message */
+
 .apply-btn{
     border: 1px solid #0e2f37;
 }
@@ -409,9 +416,7 @@ h6,
     background-color:  #0e2f37;
     color: #EEEEEE;
 }
-.welcome-text h5{
-    /* margin-bottom: 5rem; */
-}
+
 
 /*** Facility ***/
 .facility-item .facility-icon {
@@ -427,15 +432,14 @@ h6,
 
 @media (max-width: 768px) {
     .main-actionBar {
-        margin-top: -75px; /* Adjust to overlap as needed */
+        margin-top: -75px; 
         margin-left: 0;
         margin-right: 0;
-        height: auto; /* Adjust height to fit mobile screens */
+        height: auto; 
     }
 }
 
-
-.facility-item .facility-icon::before {
+ .facility-item .facility-icon::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -506,7 +510,7 @@ h6,
 
 .facility-item:hover * {
     color: #FFFFFF !important;
-}
+} 
 
 
 /*** About ***/
@@ -516,11 +520,7 @@ h6,
 
 .about-img img:hover {
     background: var(--primary) !important;
-}
-
-.about-btn{
-    
-}
+} 
 
 
 /*** Classes ***/
@@ -530,7 +530,7 @@ h6,
 
 .classes-item:hover {
     margin-top: -10px;
-}
+} 
 
 
 /*** Team ***/
@@ -550,7 +550,7 @@ h6,
     transition: .5s;
    margin-left: 9rem;
 
-}
+} 
 .team-text{
     margin-top: 19rem;
 } 
@@ -692,4 +692,5 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
-}
+} 
+

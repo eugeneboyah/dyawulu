@@ -79,27 +79,67 @@
     
 })(jQuery);
 
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll('.count');
-    const speed = 7000; // Increase speed for slower count-up (higher number means slower)
+// impact section
 
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-count');
-        const count = +counter.innerText;
-        const increment = target / speed; // Smaller increments for smoother counting
+ // Function to handle the count-up
+ function countUp(element) {
+    const target = parseInt(element.getAttribute('data-count'), 10);
+    let count = 0;
+    const speed = 200; // Adjust this value for speed of count-up
+    const increment = target / speed;
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 20); // Increase this delay to slow down the update rate
-        } else {
-          counter.innerText = target; // Ensure it ends exactly at the target value
+    const counter = setInterval(() => {
+      count += increment;
+      element.textContent = Math.floor(count);
+
+      if (count >= target) {
+        element.textContent = target; // Ensure it ends at the correct number
+        clearInterval(counter);
+      }
+    }, 10); // Interval for updating the number
+  }
+
+  // Function to observe the impact section
+  function observeImpactSection() {
+    const impactSection = document.querySelector('.impact-section');
+    const impactCounters = document.querySelectorAll('.count');
+    let counted = false; // To ensure counting only happens once
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !counted) {
+          counted = true;
+          impactCounters.forEach(counter => {
+            countUp(counter);
+          });
         }
-      };
-
-      updateCount();
+      });
+    }, {
+      threshold: 0.5 // Adjust this value based on when you want to trigger the count-up (50% in view)
     });
+
+    observer.observe(impactSection);
+  }
+
+  // Run the observe function once the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', observeImpactSection);
+
+  $(window).on('scroll', function(){
+    function isScrollIntoView(elem, index) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(window).height()*.5;
+      if(elemBottom <= docViewBottom && elemTop >= docViewTop) {
+        $(elem).addClass('active');
+      }
+      if(!(elemBottom <= docViewBottom)) {
+        $(elem).removeClass('active');
+      }
+      var MainTimelineContainer = $('#vertical-scrollable-timeline')[0];
+      var MainTimelineContainerBottom = MainTimelineContainer.getBoundingClientRect().bottom - $(window).height()*.5;
+      $(MainTimelineContainer).find('.inner').css('height',MainTimelineContainerBottom+'px');
+    }
+    var timeline = $('#vertical-scrollable-timeline li');
+    Array.from(timeline).forEach(isScrollIntoView);
   });
-
-
-  

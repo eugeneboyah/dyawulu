@@ -939,17 +939,17 @@ h6,
   
   @media (max-width: 576px) {
     .tabs {
-      flex-direction: column; 
+      flex-direction: row; 
     }
   
     .tabs li {
-      width: 100%;
+      width: 30%;
       text-align: center;
     }
   }
   
   
-.projects-content {
+/* .projects-content {
     padding-top: 20vh;
     background-image: url(../img/3rd-section.jpg);
   }
@@ -998,4 +998,56 @@ h6,
     -moz-border-radius: 20px;
     border-radius: 20px;
     background: #fff;
-  }
+  } */
+
+  * {
+    box-sizing: border-box;
+}
+
+.projects-content {
+    padding-top: 20vh;
+    background-image: url(../img/3rd-section.jpg);
+    overflow: hidden; /* Prevents overflow */
+}
+
+.projects-content .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.projects-content .item {
+    margin: 0 15px; /* Adjusted to center items without overflow */
+}
+
+.projects-content .item .text-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-content .item .text-content h4 {
+    margin-top: 0px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.projects-content .item .text-content span {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ff7d27;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow: hidden;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+
+.owl-pagination {
+    margin-top: 40px;
+    display: inline-block;
+}

@@ -60,6 +60,10 @@
     font-size: 3rem;
     
   } 
+  .impact-icon i {
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #FE5D37;
+  }
 
   .impact-item h3 {
     font-size: 2.5rem;
@@ -1005,7 +1009,7 @@ h6,
 }
 
 .projects-content {
-    padding-top: 20vh;
+    padding-top: 5vh;
     background-image: url(../img/3rd-section.jpg);
     overflow: hidden; /* Prevents overflow */
 }
@@ -1021,7 +1025,7 @@ h6,
 }
 
 .projects-content .item .text-content {
-    background-color: #fff;
+    background-color: #1A2421;
     text-align: center;
     padding: 20px;
 }
@@ -1030,6 +1034,7 @@ h6,
     margin-top: 0px;
     font-size: 19px;
     font-weight: 600;
+    color: #FFF5F3;
 }
 
 .projects-content .item .text-content span {

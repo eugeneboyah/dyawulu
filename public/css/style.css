@@ -1086,3 +1086,41 @@ h6,
 .quick-link a{
   font-size: 10px;
 }
+
+/* form message */
+.success {
+  color: green;
+  background-color: #e6ffe6;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input, textarea, button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

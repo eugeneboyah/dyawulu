@@ -63,7 +63,6 @@ app.get('/team', (req, res) => {
 });
 
 // Route to appointment form submission
-// Route to appointment form submission
 app.post('/appointment', (req, res) => {
     const { gname, gmail, cname, cage, message } = req.body;
 
@@ -95,19 +94,20 @@ app.post('/appointment', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error occurred while sending email:', error);
-            res.render('appointment', { 
+            res.json({ 
                 success: false, 
                 message: 'Something went wrong. Please try again later.' 
             });
         } else {
             console.log('Email sent successfully: ' + info.response);
-            res.render('appointment', { 
+            res.json({ 
                 success: true, 
                 message: 'Your appointment request has been sent successfully!' 
             });
         }
     });
 });
+
 
 
 

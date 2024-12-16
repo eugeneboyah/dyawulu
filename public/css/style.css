@@ -725,7 +725,7 @@ h6,
   TIMELINE              
 -----------------------------------------*/
 .timeline-section {
-    background-image: url('/public/img/dyawulu-1.jpg');
+    background-image: url('/img/dyawulu-1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -859,7 +859,7 @@ h6,
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 8vh;
-    background-image: url(/public/img/story-bg.png);
+    background-image: url(/img/story-bg.png);
     background-attachment: fixed;
     min-height: 70vh;
     background-size: cover;
@@ -1032,7 +1032,7 @@ h6,
 
 .projects-content {
     padding-top: 5vh;
-    background-image: url(../img/3rd-section.jpg);
+    background-image: url(/img/3rd-section.jpg);
     overflow: hidden; /* Prevents overflow */
 }
 

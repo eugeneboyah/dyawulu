@@ -77,7 +77,7 @@ app.post('/appointment', (req, res) => {
     });
 
     const mailOptions = {
-        from: `"Dya-Wulu School" <${process.env.EMAIL_USER}>`, 
+        from:`"${gname}" <${gmail}>`, 
         to: process.env.EMAIL_USER, 
         replyTo: gmail,
         subject: `📅 New Appointment Request from ${gname}`,

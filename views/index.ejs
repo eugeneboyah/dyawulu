@@ -154,7 +154,12 @@
                   <div class="welcome-message">
                     <h1 class="mb-4">Dya-wulu Cooperative Learning Center</h1>
                     <p class="mb-4">
-                        It is my pleasure to welcome you to the Dya-wulu Cooperative Learning Center website.  We aim to provide the children in our care with the very best educational experiences and opportunities. We exist to provide quality Christian Pre-School, Primary and Junior High Education at the Community and National levels to the developing leaders of our country and the world at large. Our integrated curriculum promotes children’s values, a range of life skills and a love of learning.   We strongly believe that these combined will build the foundations for a successful education, helping the children in our care to become lifelong learners.                      </p>
+                        It is my pleasure to welcome you to the Dya-wulu Cooperative Learning Center website.
+                          We aim to provide the children in our care with the very best educational experiences and opportunities.
+                           We exist to provide quality Christian Pre-School, Primary and Junior High Education at the Community
+                            and National levels to the developing leaders of our country and the world at large. Our integrated curriculum promotes 
+                            children’s values, a range of life skills and a love of learning.   We strongly believe that these combined will 
+                            build the foundations for a successful education, helping the children in our care to become lifelong learners.                      </p>
                     <!-- Buttons Section -->
                      <a href="about"class="btn atction-btn btn-primary me-2">About Us</a>
                      <a href="404"class="btn atction-btn apply-btn">Enroll to DCLC</a>
@@ -660,7 +665,7 @@
                                         <img class="rounded-circle flex-shrink-0" src="/img/Angefus.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
                                             <h6 class="text-primary mb-1">Mrs. Angefus M. Gbozuah</h6>
-                                            <small>Teacher</small>
+                                            <small>Supervisor</small>
                                         </div>
                                     </div>
                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Message</span>
@@ -744,8 +749,10 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4 text-center">Make Appointment</h1>
-                                <form action="/appointment" method="POST" class="d-flex flex-column justify-content-center align-items-center">
-                                    <div class="row g-3 w-100">
+                                    <!-- Response Message (initially hidden) -->
+                                <div id="response-message" class="alert" style="display: none;"></div>
+
+                                <form id="appointment-form" class="d-flex flex-column justify-content-center align-items-center">                                    <div class="row g-3 w-100">
                                         <div class="col-12 col-md-6">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control border-0" id="gname" name="gname" placeholder="Guardian Name" required>
@@ -777,13 +784,10 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                            <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
                                         </div>
-                                        <div id="response-message" class="alert alert-success" role="alert"></div>
-                                        
                                     </div>
                                 </form>
-                                
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
@@ -901,7 +905,7 @@
             </div>
         </div>
         <!-- Testimonial End -->
-
+       
 
             <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -950,11 +954,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Newsletter</h3>
-                    <p>Subscribe to your Newsletter.</p>
+                    <p>Subscribe to our Newsletter.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                      <input id="email" class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email">
+                      <button id="subscribeBtn" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
+                    <div id="responseMessage" style="margin-top: 10px; color: #fff;"></div>
                 </div>
             </div>
         </div>
@@ -998,7 +1003,8 @@
     <script src="/js/main.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/response.js"></script>
-
+    <script src="/js/appointment-response.js"></script>
+    <script src="/js/newsletter.js"></script>
 </body>
 
 </html>

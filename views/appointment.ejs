@@ -53,21 +53,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="about" class="nav-item nav-link">About Us</a>
-                    <a href="classes" class="nav-item nav-link">Classes</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility" class="dropdown-item">School Facilities</a>
-                            <a href="team" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial" class="dropdown-item">Testimonial</a>
-                            <a href="404" class="dropdown-item">404 Error</a>
-                        </div>
-                    </div>
-                    <a href="contact" class="nav-item nav-link">Contact Us</a>
+                    <a href="/" class="nav-item nav-link ">HOME</a>
+                    <a href="about" class="nav-item nav-link ">ABOUT US</a>
+                    <a href="404" class="nav-item nav-link">ENROLL</a>
+                    <a href="ruby" class="nav-item nav-link">OUR FOUNDER'S STORY</a>
+                    <a href="appointment" class="nav-item nav-link active">APPOINTMENT</a>
+                    <a href="contact" class="nav-item nav-link">CONTACT</a>
                 </div>
                 <img src="/img/faces.jpeg" class="m-0 text-primary" style=" width: 150px; height: 80px;" alt="">
                 <!-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> -->
@@ -93,48 +84,50 @@
         <!-- Page Header End -->
 
 
-         <!-- Appointment Start -->
-         <div class="container-xxl py-5">
+                 <!-- Appointment Start -->
+        <div class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded">
                     <div class="row g-0">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Make Appointment</h1>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
+                                <h1 class="mb-4 text-center">Make Appointment</h1>
+                                    <!-- Response Message (initially hidden) -->
+                                <div id="response-message" class="alert" style="display: none;"></div>
+
+                                <form id="appointment-form" class="d-flex flex-column justify-content-center align-items-center">                                    <div class="row g-3 w-100">
+                                        <div class="col-12 col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="gname">Gurdian Name</label>
+                                                <input type="text" class="form-control border-0" id="gname" name="gname" placeholder="Guardian Name" required>
+                                                <label for="gname">Guardian Name</label>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-12 col-md-6">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="gmail">Gurdian Email</label>
+                                                <input type="email" class="form-control border-0" id="gmail" name="gmail" placeholder="Guardian Email" required>
+                                                <label for="gmail">Guardian Email</label>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-12 col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
+                                                <input type="text" class="form-control border-0" id="cname" name="cname" placeholder="Child Name" required>
                                                 <label for="cname">Child Name</label>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-12 col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
+                                                <input type="text" class="form-control border-0" id="cage" name="cage" placeholder="Child Age" required>
                                                 <label for="cage">Child Age</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
                                                 <label for="message">Message</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                            <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
                                         </div>
                                     </div>
                                 </form>
@@ -162,19 +155,17 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0886-515-595 / 0777-515-595</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>dyawulu@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100057231408905"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> -->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                        <a class="btn btn-link text-white-50" href="about">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="ruby">Founder's Story</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Photo Gallery</h3>
@@ -201,7 +192,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <p>Subscribe to your Newsletter.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -214,16 +205,16 @@
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Dyawulu cooperative Learning Center</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://ejscodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://www.facebook.com/eugene.boyah.3">Eugene Boyah</a>
+                            
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://ejscodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://www.facebook.com/eugene.boyah.3">Eugene Boyah</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
+                                <a href="/">Home</a>
+                                <!-- <a href="">Cookies</a>
                                 <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="">FQAs</a> -->
                             </div>
                         </div>
                     </div>
@@ -231,9 +222,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- Footer End -->
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

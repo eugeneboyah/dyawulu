@@ -53,22 +53,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="about" class="nav-item nav-link">About Us</a>
-                    <a href="classes" class="nav-item nav-link">Classes</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility" class="dropdown-item">School Facilities</a>
-                            <a href="team" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial" class="dropdown-item">Testimonial</a>
-                            <a href="404" class="dropdown-item">404 Error</a>
-                        </div>
-                    </div>
-                    <a href="contact" class="nav-item nav-link">Contact Us</a>
+                    <a href="/" class="nav-item nav-link ">HOME</a>
+                    <a href="about" class="nav-item nav-link ">ABOUT US</a>
+                    <a href="404" class="nav-item nav-link">ENROLL</a>
+                    <a href="team" class="nav-item nav-link active">OUR TEAM</a>
+                    <a href="ruby" class="nav-item nav-link">OUR FOUNDER'S STORY</a>
+                    <a href="contact" class="nav-item nav-link">CONTACT</a>
                 </div>
+            </div>
                 <img src="/img/faces.jpeg" class="m-0 text-primary" style=" width: 150px; height: 80px;" alt="">
                 <!-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> -->
             </div>
@@ -460,11 +452,12 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <p>Subscribe to our Newsletter.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                          <input id="email" class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email">
+                          <button id="subscribeBtn" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
+                        <div id="responseMessage" style="margin-top: 10px; color: #fff;"></div>
                     </div>
                 </div>
             </div>
